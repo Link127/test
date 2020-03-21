@@ -11,7 +11,18 @@
         width: 402px;
         margin: 0 auto;
        background-color: darkturquoise;
-        
+        position: relative;
+    }
+    .conten::before{
+        content: "";
+        position: absolute;
+        left: -4px;
+        right: -4px;
+        top: -4px;
+        bottom: -4px;
+        z-index: -1;
+        background-color: rgb(41, 188, 199);
+        filter: blur(3px);
     }
     .clear::after{
             content: "";
@@ -23,6 +34,7 @@
         }
         h2{
         color: rgba(1, 72, 143, 0.699);
+        margin-top: 0;
         }
     .ind{
         width: 398px;
@@ -38,7 +50,7 @@
     }
     .mess{
         float: left;
-        color;
+        color:rgb(56, 16, 16);
     }
     .sss{
         float: left;
