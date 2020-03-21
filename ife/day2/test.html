@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=F, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .conten{
+        width: 402px;
+        margin: 0 auto;
+       background-color: darkturquoise;
+        position: relative;
+    }
+    .conten::before{
+        content: "";
+        position: absolute;
+        left: -4px;
+        right: -4px;
+        top: -4px;
+        bottom: -4px;
+        z-index: -1;
+        background-color: rgb(41, 188, 199);
+        filter: blur(3px);
+    }
+    .clear::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    h1{
+        color: #d32424;
+        }
+        h2{
+        color: rgba(1, 72, 143, 0.699);
+        margin-top: 0;
+        }
+    .ind{
+        width: 398px;
+        float: left;
+        margin-bottom: 20px;
+        background-color: rgb(233, 99, 133);
+        
+        box-shadow: 3px 3px rgba(0, 0,0, 0.7);
+        box-sizing: border-box;
+    }
+    .ind:nth-child(4){
+        margin-bottom: 6px;
+    }
+    .mess{
+        float: left;
+        color:rgb(56, 16, 16);
+    }
+    .sss{
+        float: left;
+        margin-left: 200px;
+        color: wheat;
+    }
+</style>
+<body>
+    <div class="conten clear">
+        <h1>简历</h1>
+        <div class="ind">
+            <span class="mess">姓名</span>
+            <span class="sss">LINK</span>
+            <br>
+            <span class="mess">大学</span>
+            <span class="sss">中原工学院</span>
+            <br>
+            <span class="mess">电话</span>
+            <span class="sss">12345677777</span>
+        </div>
+        <div class="ind">
+            <h2>工作经验</h2>
+            <span class="mess">目前大三学生无工作经验</span>
+        </div>
+        <div class="ind">
+            <h2>自我评价</h2>
+            <span class="mess">
+                我是一个自我管理能力强的好学生
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
