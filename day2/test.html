@@ -8,25 +8,46 @@
 </head>
 <style>
     .conten{
-        width: 400px;
+        width: 402px;
         margin: 0 auto;
-        text-align: center;
+       background-color: darkturquoise;
+        
     }
+    .clear::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    h1{
+        color: #d32424;
+        }
+        h2{
+        color: rgba(1, 72, 143, 0.699);
+        }
     .ind{
-        width: 400px;
+        width: 398px;
         float: left;
-        border-bottom: 1px solid black;
         margin-bottom: 20px;
+        background-color: rgb(233, 99, 133);
+        
+        box-shadow: 3px 3px rgba(0, 0,0, 0.7);
+        box-sizing: border-box;
+    }
+    .ind:nth-child(4){
+        margin-bottom: 6px;
     }
     .mess{
         float: left;
+        color;
     }
     .sss{
-        float: right;
+        float: left;
+        margin-left: 200px;
+        color: wheat;
     }
 </style>
 <body>
-    <div class="conten">
+    <div class="conten clear">
         <h1>简历</h1>
         <div class="ind">
             <span class="mess">姓名</span>
