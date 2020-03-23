@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        width: 60vh;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: left;
+        background-color: rgb(74, 201, 252);
+        font-weight: bold;
+
+    }
+
+    .header>p {
+        font-size: 30px;
+        color: whitesmoke;
+    }
+
+    .left {
+        width: 40vh;
+        background-color: rgba(192, 187, 187, 0.61);
+        margin: 0 auto;
+        float: left;
+
+    }
+
+    .left>span {
+        display: inline-block;
+        font-size: 22px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    .clearfix::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    ul {
+        width: auto;
+        height: auto;
+    }
+
+    li {
+        list-style: none;
+        font-size: 15px;
+
+    }
+
+    li>span {
+        width: 150px;
+        float: right;
+        font-weight: normal;
+    }
+    li>span>a:visited{
+      color: blue;
+    }
+    .right {
+        float: left;
+        width: 20vh;
+        height: 159px;
+        line-height: 150px;
+        border: 1px solid rgb(14, 13, 13);
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .footer {
+        width: 60vh;
+        float: left;
+        background-color: burlywood;
+        
+    }
+    .footer>span{
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .footer>p{
+        font-size: 15px;
+        font-weight: normal;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <p>个人简历</p>
+        <div class="left">
+            <span>基本信息</span>
+            <ui>
+                <li>姓名: <span>LINK</span></li>
+                <li>性别：<span>男</span></li>
+                <li>出生日期: <span>1999.5.23</span></li>
+                <li>毕业于: <span>zut</span></li>
+                <li>工作经验<span>无</span></li>
+                <li>邮箱：<span><a href="">163163@163.com</a></span></li>
+            </ui>
+        </div>
+        <div class="right">
+            <span>照片</span>
+        </div>
+        <div class="footer">
+            <span>个人爱好</span>
+            <p>
+                查看更多步骤...</p>
+            <span>个人评价</span>
+            <p>努力学习的好孩子</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
