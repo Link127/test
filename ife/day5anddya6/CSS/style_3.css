@@ -27,11 +27,7 @@ footer, header, hgroup, menu, nav, section{
 ol, ul, li{
   list-style: none;
 }
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
-}
+
 li{
     float: left;
     font-weight: bold;
