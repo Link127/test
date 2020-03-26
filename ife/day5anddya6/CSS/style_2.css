@@ -29,9 +29,7 @@ ol, ul, li{
 }
 
 .left{
-    
     float: left;
-
 }
 div.left:nth-child(1){
     background-color: turquoise;
