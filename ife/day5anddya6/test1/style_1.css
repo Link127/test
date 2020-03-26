@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.clear{
+    clear: both;
+}
+h1{
+    margin: 10px auto;
+}
+div{
+    margin-bottom: 10px;
+}
+ul{
+    list-style: none;
+}
+li{
+    font-weight: bold;
+    float: left;
+    margin-right: 20px;
+}
+span{
+    font-weight: normal;
+}
