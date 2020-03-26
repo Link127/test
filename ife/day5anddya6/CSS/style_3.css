@@ -27,3 +27,48 @@ footer, header, hgroup, menu, nav, section{
 ol, ul, li{
   list-style: none;
 }
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+li{
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.left{
+    
+    float: left;
+
+}
+
+.nav{
+    width: 600px;
+    height: 50px;
+    background-color: darkgrey;
+    line-height: 50px;
+}
+.content{
+    width: 600px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    margin-bottom: 3px;
+}
+.mess{
+    width: auto;
+    height: 85px;
+    border-bottom: 1px solid white;
+}
+h2{
+    float: left;
+    width: 70px;
+    height: 85px;
+    background: black;
+    color: white;
+    line-height: 84px;
+    
+}
+.mess:last-child{
+    border: none;
+}
