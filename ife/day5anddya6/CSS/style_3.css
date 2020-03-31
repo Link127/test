@@ -48,7 +48,7 @@ li{
 .mess{
     width: auto;
     height: 85px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(134, 129, 129);
 }
 h2{
     float: left;
