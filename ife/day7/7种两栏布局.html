@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            padding: 15px 20px;
+            border: 1px dashed #ff6c60;
+            position: relative;
+        }
+
+        .left {
+            width: 120px;
+            border: 5px solid #ddd;
+        }
+
+        .right {
+            margin-left: 20px;
+            border: 5px solid #ddd;
+        }
+
+        /* 双inline-block */
+        .wrapper-inline-block {
+            box-sizing: content-box;
+            font-size: 0;
+        }
+
+        .wrapper-inline-block .left,
+        .wrapper-inline-block .right {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .wrapper-inline-block .right {
+            width: calc(100% - 140px);
+        }
+
+        /* 双float */
+        .wrapper-double-float {
+            overflow: auto;
+            box-sizing: content-box;
+        }
+
+        .wrapper-double-float .left,
+        .wrapper-double-float .right {
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .wrapper-double-float .right {
+            width: calc(100% - 140px);
+        }
+
+        /* 左浮动加右边设置左边距 */
+        .wrapper-float {
+            overflow: hidden;
+        }
+
+        .wrapper-float .left {
+            float: left;
+        }
+
+        .wrapper-float .right {
+            margin-left: 150px;
+        }
+
+        /* 浮动加上右侧bfc */
+        .wrapper-float-bfc {
+            overflow: auto;
+        }
+
+        .wrapper-float-bfc .left {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .wrapper-float-bfc .right {
+          
+            overflow: auto;
+        }
+
+        /* 定位加边距 */
+        .wrapper-absolute .left {
+            position: absolute;
+        }
+
+        .wrapper-absolute .right {
+            margin-left: 150px;
+        }
+        /* flex布局 */
+        .wrapper-flex{
+            display: flex;
+            align-items: flex-start;
+        }
+        .wrapper-flex .left{
+            flex: 0  auto;
+            /* flex第一个是设置布局占比，第二个是 */
+            /* flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值 */
+        }
+        .wrapper-flex .right{
+            flex: 1 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="padding: 20px 20px;">
+        <span style="color: #ff6c60;">选择不同的方案查看效果:</span>
+        <select id="select">
+            <option value="0">双inline-block方案</option>
+            <option value="1">双float方案</option>
+            <option value="2">float+margin-left方案</option>
+            <option value="4">absolute+margin-left方案</option>
+            <option value="3">float+BFC方案</option>
+            <option value="5">flex方案</option>
+            <option value="6">grid方案</option>
+        </select>
+    </div>
+    <div style="padding: 20px;">
+        <span style="color: #ff6c60;">选择右侧不同的高度:</span>
+        <select id="changeHeight">
+            <option value="1">右侧很低</option>
+            <option value="0">右侧很高</option>
+
+        </select>
+    </div>
+    <div class="wrapper wrapper-inline-block" id="wrapper">
+        <div class="left">左边固定宽度，高度不固定
+            高度有可能会很小，也可能很大。
+        </div>
+        <div class="right">
+            这里的内容可能比左侧高，也可能比左侧低。宽度需要自适应。
+            基本的样式是，两个div相距20px, 左侧div宽 120px
+        </div>
+    </div>
+    <script>
+        var wrapper = document.querySelector('#wrapper')
+        document.querySelector('#select').addEventListener('change', function (event) {
+            var value = event.target.value //event.target代表当前应用对象的子元素，在在是options.value
+            switch (+value) {
+                case 0:
+                    wrapper.className = 'wrapper wrapper-inline-block';
+                    break;
+                case 1:
+                    wrapper.className = 'wrapper wrapper-double-float';
+                    break;
+                case 2:
+                    wrapper.className = 'wrapper wrapper-float';
+                    break;
+                case 3:
+                    wrapper.className = 'wrapper wrapper-float-bfc ';
+                    break;
+                case 4:
+                    wrapper.className = 'wrapper wrapper-absolute';
+                    break;
+                case 5:
+                    wrapper.className = 'wrapper wrapper-flex';
+                    break;
+                case 6:
+                    wrapper.className = 'wrapper wrapper-grid';
+                    break;
+            }
+        })
+        var rightDiv = document.querySelector('.right')
+        document.querySelector('#changeHeight').addEventListener('change', function (event) {
+            var value = event.target.value
+            switch (+value) {
+                case 0:
+                    rightDiv.style.height = "700px";
+                    break;
+                case 1:
+                    rightDiv.style.height = "auto";
+                    break;
+            }
+        })
+    </script>
+</body>
+
+</html>
