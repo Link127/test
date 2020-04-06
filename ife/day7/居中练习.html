@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <style>
+    /* 行盒居中利用 text-align: center;和line-height*/
     .line{
         background-color: aquamarine;
         width: 200px;
@@ -13,6 +14,7 @@
         line-height: 300px;
         text-align: center;
     }
+    /*当父子都有宽高时 计算margin值 */
     .block{
         width: 300px;
         height: 300px;
@@ -25,6 +27,7 @@
         background-color: blue;
         margin: 100px auto;
     }
+    /* 利用定位 四个方向都设置0，再margin： auto*/
     .block2{
         position: relative;
         width: 300px;
@@ -44,6 +47,7 @@
         margin: auto;
        
     }
+    /* 利用定位，上左设置百分比，再用  transform: translate(-50%,-50%);*/
     .block3{
         width: 300px;
         height: 300px;
@@ -51,8 +55,8 @@
         position: relative;
     }
     .block3>div{
-        width: 200px;
-        height: 100px;
+        /* width: 200px;
+        height: 100px; */
         background-color: yellow;
         position: absolute;
         left: 50%;
