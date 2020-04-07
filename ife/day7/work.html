@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        width: 100%;
+        height: 105px;
+        background-color: dimgray;
+    }
+    .area{
+        width: 960px;
+        height: 100px;
+        margin: auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+        background-color: rgb(158, 152, 152);
+        position: relative;
+    }
+    .logo{
+       position: absolute;
+       height: 50px;
+       margin-top: 25px;
+       line-height: 50px;
+    }
+    .nav{
+        width: 100px;
+        height: 50px;
+        float: right;
+        background-color: rgb(151, 147, 147);
+        border: 1px solid white;
+        box-sizing: border-box;
+    }
+    .banner{
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+        background-color: yellowgreen;
+        position: relative;
+        overflow: auto;
+    }
+    .click{
+        width: 140px;
+        height: 30px;
+        background-color: rgb(242, 244, 247);
+        position: absolute;
+        right: 270px;
+        bottom: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .click>div{
+        background-color: rgb(158, 211, 211);
+        width: 20px;
+        text-align: center;
+    }
+    .click>div:hover{
+        position: relative;
+        margin-top: -20px;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+    }
+
+    .main-nav{
+        width: 960px;
+        height: 30px;
+        margin: 0 auto;
+        line-height: 30px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    .main-nav::after{
+        display: block;
+        content: '';
+        height: 1px;
+        background-color: rgb(187, 184, 184);
+    }
+    .main-nav>div{
+        display: inline-block;
+        width: 60px;
+        text-align: center;
+        background-color: rgb(189, 113, 113);
+        border-radius: 10px 10px 0 0;
+    }
+    .container{
+        width: 960px;
+        height: 600px;
+        background-color: rgb(158, 211, 211);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .block{
+        width: 200px;
+        height: 180px;
+        padding:80px 80px;
+        box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: royalblue;
+    }
+
+    .footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background-color: grey;
+        line-height: 100px;
+        text-align: center;
+        margin-top:100px;
+    }
+</style>
+<body>
+    <header>
+        <div class="area">
+            <div class="logo">
+                <span>Logo</span>
+            </div>
+            <div class="nav"></div>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="click">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div class="main-nav">
+        <div class="first-nav">aaaa</div>
+        <div class="second-nav">bbbb</div>
+        <div class="last-nav">cccc</div>
+    </div>
+    <div class="container">
+        <div class="block">1</div>
+        <div class="block">2</div>
+        <div class="block">3</div>
+        <div class="block">4</div>
+        <div class="block">5</div>
+        <div class="block">6</div>
+        <div class="block">7</div>
+        <div class="block">8</div>
+        <div class="block">9</div>
+    </div>
+    <footer class="footer">
+        <h2>商住号</h2>
+    </footer>
+</body>
+</html>
