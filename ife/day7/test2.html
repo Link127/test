@@ -6,23 +6,31 @@
     <title>Document</title>
 </head>
 <style>
-    .left{
-        width: 300px;
-        height: 400px;
-        background-color: cadetblue;
+    .left,.center,.right{
         float: left;
+        height: 400px;
+    }
+    .left,.center{
+        width: 200px;
+        
+    }
+    .left{
+        background-color: darkorange;
+    }
+    .center{
+        background-color: darkorchid;
     }
     .right{
-        width: auto;
-        height: 400px;
-        background-color: coral;
-        margin-left: 300px;
+        width: calc(100% - 400px);
+        background-color: darkred;
+        
     }
 </style>
 <body>
-    <div class="container">
+    <div>
         <div class="left"></div>
-        <div class="right"></div>
+        <div class="center"></div>
+        <div class="right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione minima quasi commodi eligendi voluptate enim non. Nemo nam odit modi optio? Odit delectus facilis, placeat beatae modi blanditiis illo neque?</div>
     </div>
 </body>
 </html>
