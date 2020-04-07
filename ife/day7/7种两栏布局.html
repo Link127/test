@@ -80,7 +80,7 @@
         }
 
         .wrapper-float-bfc .right {
-          
+
             overflow: auto;
         }
 
@@ -92,18 +92,41 @@
         .wrapper-absolute .right {
             margin-left: 150px;
         }
+
         /* flex布局 */
-        .wrapper-flex{
+        .wrapper-flex {
             display: flex;
             align-items: flex-start;
         }
-        .wrapper-flex .left{
-            flex: 0  auto;
+
+        .wrapper-flex .left {
+            flex: 0 auto;
             /* flex第一个是设置布局占比，第二个是 */
             /* flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值 */
         }
-        .wrapper-flex .right{
+
+        .wrapper-flex .right {
             flex: 1 auto;
+        }
+
+        /* grid布局 */
+        .wrapper-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            align-items: start;
+        }
+
+        .wrapper-grid .left,
+        .wrapper-grid .right {
+            box-sizing: border-box;
+        }
+
+        .wrapper-grid .left {
+            grid-column: 1;
+        }
+
+        .wrapper-grid .right {
+            grid-column: 2;
         }
     </style>
 </head>
