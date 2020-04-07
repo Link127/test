@@ -93,23 +93,41 @@
     }
     .container{
         width: 960px;
-        height: 600px;
-        background-color: rgb(158, 211, 211);
         margin: 0 auto;
+       
+    }
+    .first-item,.second-item,.third-item{
         display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
+        margin-bottom: 10px;
         justify-content: space-between;
     }
-    .block{
-        width: 200px;
-        height: 180px;
-        padding:80px 80px;
-        box-sizing: border-box;
-        box-sizing: border-box;
-        background-color: royalblue;
+    .first-item>div{
+        flex: 1;
+        height: 200px;
+        margin-left: 10px;
+        border: 1px solid black;
     }
-
+    .first-item>div:first-child{
+        margin-left: 0;
+    }
+    .second-item>div{
+        flex: 1;
+        height: 200px;
+        margin-left: 10px;
+        border: 1px solid black;
+    }
+    .second-item>div:first-child{
+        margin-left: 0;
+    }
+    .third-item>div{
+        flex: 1;
+        height: 200px;
+        margin-left: 10px;
+        border: 1px solid black;
+    }
+    .third-item>div:first-child{
+        margin-left: 0;
+    }
     .footer{
         position: relative;
         bottom: 0;
@@ -145,15 +163,22 @@
         <div class="last-nav">cccc</div>
     </div>
     <div class="container">
-        <div class="block">1</div>
-        <div class="block">2</div>
-        <div class="block">3</div>
-        <div class="block">4</div>
-        <div class="block">5</div>
-        <div class="block">6</div>
-        <div class="block">7</div>
-        <div class="block">8</div>
-        <div class="block">9</div>
+        <div class="first-item">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="second-item">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="third-item">
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <footer class="footer">
         <h2>商住号</h2>
