@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        var add = document.getElementById("add-btn");
+        var minus = document.getElementById("minus-btn");
+        var times = document.getElementById("times-btn");
+        var divide = document.getElementById("divide-btn");
+        add.addEventListener("click", function () {
+            var a = parseInt(document.getElementById("first-number").value)
+            var b = parseInt(document.getElementById("second-number").value)
+            var res = document.getElementById("result");
+            if(!isNaN(a+b)){
+                res.innerHTML="运算结果 :"+ (a+b)
+                }
+            else{
+                alert("输入不规范，请重新输入")
+            }
+        })
+        minus.addEventListener("click", function () {
+            var a = parseInt(document.getElementById("first-number").value)
+            var b = parseInt(document.getElementById("second-number").value)
+            var res = document.getElementById("result");
+            if(!isNaN(a-b)){
+                res.innerHTML="运算结果 :"+ (a-b)
+                }
+            else{
+                alert("输入不规范，请重新输入")
+            }
+        })
+        times.addEventListener("click", function () {
+            var a = parseInt(document.getElementById("first-number").value)
+            var b = parseInt(document.getElementById("second-number").value)
+            var res = document.getElementById("result");
+            if(!isNaN(a*b)){
+                res.innerHTML="运算结果 :"+ (a*b)
+                }
+            else{
+                alert("输入不规范，请重新输入")
+            }
+        })
+        divide.addEventListener("click", function () {
+            var a = parseInt(document.getElementById("first-number").value)
+            var b = parseInt(document.getElementById("second-number").value)
+            var res = document.getElementById("result");
+            if(!isNaN(a/b)){
+                res.innerHTML="运算结果 :"+ (a/b)
+                }
+            else{
+                alert("输入不规范，请重新输入")
+            }
+        })
+    </script>
+</body>
+
+</html>
