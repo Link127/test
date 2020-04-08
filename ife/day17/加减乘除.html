@@ -57,7 +57,7 @@
             var a = parseInt(document.getElementById("first-number").value)
             var b = parseInt(document.getElementById("second-number").value)
             var res = document.getElementById("result");
-            if(!isNaN(a/b)){
+            if(!isNaN(a/b)&&b!=0){
                 res.innerHTML="运算结果 :"+ (a/b)
                 }
             else{
