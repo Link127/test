@@ -164,7 +164,7 @@
     <script>
         var wrapper = document.querySelector('#wrapper')
         document.querySelector('#select').addEventListener('change', function (event) {
-            var value = event.target.value //event.target代表当前应用对象的子元素，在在是options.value
+            var value = event.target.value //event.target代表当前应用对象的子元素，在这是options.value
             switch (+value) {
                 case 0:
                     wrapper.className = 'wrapper wrapper-inline-block';
