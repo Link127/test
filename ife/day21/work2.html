@@ -31,7 +31,20 @@
     </select>
 
     <script>
-        
+        var school = document.getElementById("school-select")
+        var company = document.getElementById("company-select")
+
+        var sc = document.getElementById("school")
+        sc.addEventListener("click",function(){
+            school.style.display = "block";
+            company.style.display = "none";
+        })
+        var co = document.getElementById("company")
+        co.addEventListener("click",function(){
+            school.style.display = "none";
+            company.style.display = "block"
+            company.style.marginLeft = "100px"
+        })
     </script>
 </body>
 </html>
