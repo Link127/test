@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        请选择您喜欢的浏览器：
+        <select id="myList">
+          <option value="0">Internet Explorer</option>
+          <option value="1">Netscape</option>
+          <option value="2">Opera</option>
+        </select>
+        <p>您喜欢的浏览器是：<input type="text" id="favorite" size="20"></p>
+        </form>
+    <script>
+        var mylist = document.getElementById("myList")
+        var text = document.getElementById("favorite")
+        mylist.addEventListener("change",function(event){
+            text.value = mylist.options[mylist.selectedIndex].text
+            console.log(event.target.value)
+        }) 
+        
+
+</script>
+</body>
+
+</html>
