@@ -17,10 +17,11 @@
             return Math.floor(Math.random() * (number + 1));
         }
 
-        btn.onclick = function () {
+        function colorchange() {
             var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
             document.body.style.backgroundColor = rndCol;
         }
+        btn.addEventListener('click',colorchange);
     </script>
 </body>
 
