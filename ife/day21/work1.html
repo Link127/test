@@ -12,18 +12,18 @@
     <button id="submit-btn">Submit</button>
     <script>
         var btn = document.getElementById("submit-btn")
-        var txt =document.getElementById("name");
-        btn.addEventListener("click",function(){
+        var txt = document.getElementById("name");
+        btn.addEventListener("click", function () {
             console.log(txt.value)
         })
-        txt.addEventListener("keydown",function(event){
+        txt.addEventListener("keydown", function (event) {
             var keycode = event.keyCode;
-            switch(keycode){
+            switch (keycode) {
                 case 13:
                     console.log(txt.value)
                     break;
                 case 27:
-                    txt.value=""
+                    txt.value = ""
                     break;
             }
         })
