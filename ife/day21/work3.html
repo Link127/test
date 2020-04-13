@@ -51,7 +51,7 @@
         oul.addEventListener("click", function (event) {
             var e = event || window.event;
             var target = e.target || e.srcElement;
-            if (target.nodeName.toLocaleLowerCase() == "li") {
+            if (target.nodeName.toLowerCase() == "li") {
                 var c = target.style.backgroundColor;
                 p.innerHTML=c;
                 p.style.color=c
