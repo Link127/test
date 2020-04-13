@@ -11,6 +11,7 @@
             padding: 0;
             list-style: none;
         }
+
         .palette li {
             width: 40px;
             height: 40px;
@@ -29,22 +30,33 @@
         <li style="background-color:chartreuse"></li>
         <li style="background-color:darkolivegreen"></li>
         <li style="background-color:cyan"></li>
-        <li style="background-color:#194738"></li>        
+        <li style="background-color:#194738"></li>
     </ul>
 
     <p class="color-picker"></p>
 
     <script>
-        var list = document.querySelectorAll("li");
-        for (var i = i = 0, len = list.length; i < len; i++) {
-            list[i].onclick = function(e) {
-                var t = e.target;
-                var c = t.style.backgroundColor;
-                var p = document.getElementsByClassName("color-picker")[0]
-                p.innerHTML = c;
-                p.style.color = c;
+        // var list = document.querySelectorAll("li");
+        // for (var i = i = 0, len = list.length; i < len; i++) {
+        //     list[i].onclick = function(e) {
+        //         var t = e.target;
+        //         var c = t.style.backgroundColor;
+        //         var p = document.getElementsByClassName("color-picker")[0]
+        //         p.innerHTML = c;
+        //         p.style.color = c;
+        //     }
+        // }
+        var oul = document.querySelector(".palette");
+        var p = document.getElementsByClassName("color-picker")[0];
+        oul.addEventListener("click", function (event) {
+            var e = event || window.event;
+            var target = e.target || e.srcElement;
+            if (target.nodeName.toLocaleLowerCase() == "li") {
+                var c = target.style.backgroundColor;
+                p.innerHTML=c;
+                p.style.color=c
             }
-        }
+        })
     </script>
 </body>
 
