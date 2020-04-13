@@ -7,11 +7,11 @@
 </head>
 <body>
     <div>
-        <label>Number A:<input id="radio-a" type="radio" name="math-obj" value="a"></label><input id="num-a" type="text">
-        <label>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label><input id="num-b" type="text">
+        <label>Number A:<input id="radio-a" type="radio" name="math-obj" value="a" ></label><input id="num-a" type="text">
+        <label>Number B:<input id="radio-b" type="radio" name="math-obj" value="b" ></label><input id="num-b" type="text">
     </div>
     <div>
-        <button>判断当前选中的输入框输入内容是否为数字</button>
+        <button id="isnan">判断当前选中的输入框输入内容是否为数字</button>
         <br>
         <button>把 A 四舍五入为 B 个小数位数的数字</button>
         <br>
@@ -30,4 +30,36 @@
     <p id="result"></p>
 
 </body>
+<script>
+    var box1 =document.getElementById("radio-a");
+    var box2 =document.getElementById("radio-b");
+   
+    
+    var nan = document.getElementById("isnan")
+    var txt = document.getElementById("result")
+    nan.addEventListener("click",function(){
+        if(box1.checked){
+            var a = document.getElementById("num-a").value;
+            if(isNaN(a))
+            {
+                txt.innerHTML = "这不是一个数字"
+            }
+            else
+            {
+                txt.innerHTML = "这是一个数字"
+            }
+        }
+        if(box2.checked){
+            var b = document.getElementById("num-b").value;
+            if(isNaN(b))
+            {
+                txt.innerHTML = "这不是一个数字"
+            }
+            else
+            {
+                txt.innerHTML = "这是一个数字"
+            }
+        }
+    })
+</script>
 </html>
