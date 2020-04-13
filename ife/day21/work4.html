@@ -11,5 +11,41 @@
     <div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
     <button id="fade-btn">淡出</button>
 </body>
-
+<script>
+    var btn = document.getElementById("fade-btn");
+    var obj = document.getElementById("fade-obj");
+    var oc = 10
+    var flag = 1
+    btn.addEventListener("click",fade);
+    function fade(){
+        if(flag == 1){
+            let myarr = setInterval(()=>{
+                oc-=1;
+                obj.style.opacity = `${oc/10}`;
+                btn.disabled = true
+                if(oc==0){
+                clearInterval(myarr);
+                btn.disabled = false;
+                btn.innerHTML = "淡入";}
+            },100)
+            flag=0;
+        }
+        else{
+            let myarr = setInterval(()=>{
+                oc+=1;
+                obj.style.opacity = `${oc/10}`;
+                btn.disabled = true;
+                btn.innerHTML = "淡出";
+                if(oc ==10){
+                    clearInterval(myarr);
+                    btn.disabled = false;
+                    btn.innerHTML = "淡出"
+                }
+            },100)
+            flag = 1;
+        }
+    }
+    
+    
+</script>
 </html>
