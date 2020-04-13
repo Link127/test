@@ -6,20 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        div {
             width: 480px;
             height: 480px;
             background-image: url(erik_ce204002.jpg);
             background-repeat: no-repeat;
             position: relative;
-            background-position: 0px -4320px;
+            background-position-y: -0px;
         }
     </style>
 </head>
-    
+
 <body>
-    <div></div>
-    <button>star</button>
+    <div id="smile"></div>
+    <button id="star" style="width: 100px;height: 20px;">star</button>
+    <script>
+        var btn = document.getElementById("star");
+        var obj = document.getElementById("smile");
+        var position = -480;
+        var flag = 1;
+
+        function star() {
+            if (flag == 1) {
+                let myTime = setInterval(() => {
+                    position -= 480;
+                    obj.style.backgroundPositionY = `${position}px`;
+                    if(position == -7680){
+                        clearInterval(myTime)
+                        btn.innerHTML="playback"
+                    }
+                }, 70)
+                flag=0;
+            }
+            else{
+                let myTime = setInterval(() => {
+                    position += 480;
+                    obj.style.backgroundPositionY = `${position}px`;
+                    if(position == -480){
+                        clearInterval(myTime)
+                        btn.innerHTML="star"
+                    }
+                }, 70)
+                flag = 1;
+            }
+        }
+        btn.addEventListener("click",star);
+    </script>
 </body>
 
 </html>
