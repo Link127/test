@@ -37,6 +37,23 @@
         <button>把所选输入框中内容的a全部替换成另外一个输入框中的内容</button><br>
     </div>
     <p id="result"></p>
+    <script>
+        var box1 = document.getElementById("radio-a");
+        var box2 = document.getElementById("radio-b");
+        var txt = document.querySelectorAll("textarea");
+        var num_a = document.getElementById("num-a");
+        var num_b = document.getElementById("num-b");
+        var btnlist = document.getElementsByTagName("button");
+        var p = document.getElementById("result")
+        btnlist[0].addEventListener("click", function () {
+            if(box1.checked){
+                p.innerHTML = txt[0].value.length
+            }
+            if(box2.checked){
+                p.innerHTML = txt
+            }
+        })
+    </script>
 </body>
 
 </html>
