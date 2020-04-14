@@ -46,11 +46,81 @@
         var btnlist = document.getElementsByTagName("button");
         var p = document.getElementById("result")
         btnlist[0].addEventListener("click", function () {
-            if(box1.checked){
+            if (box1.checked) {
                 p.innerHTML = txt[0].value.length
             }
-            if(box2.checked){
-                p.innerHTML = txt
+            if (box2.checked) {
+                p.innerHTML = txt[1].value.length
+            }
+        })
+        btnlist[1].addEventListener("click", function () {
+            if (box1.checked) {
+                p.innerHTML = txt[0].value.charAt(2);
+            }
+            if (box2.checked) {
+                p.innerHTML = txt[1].value.charAt(2);
+            }
+        })
+        btnlist[2].addEventListener("click", function () {
+            p.innerHTML = txt[0].value.concat(txt[1].value);
+        })
+        btnlist[3].addEventListener("click", function () {
+            p.innerHTML = txt[0].value.indexOf(txt[1].value)
+        })
+        btnlist[4].addEventListener("click", function () {
+            p.innerHTML = txt[0].value.lastIndexOf(txt[1].value)
+        })
+        btnlist[5].addEventListener("click", function () {
+            if (box1.checked) {
+                p.innerHTML = txt[0].value.slice(num_a.value, num_b.value);
+            }
+            if (box2.checked) {
+                p.innerHTML = txt[1].value.slice(num_a.value, num_b.value);
+            }
+        })
+        // 获取当前行数
+        // btnlist[6].addEventListener("click",function(){
+        //     if (box1.checked) {
+        //         p.innerHTML = txt[0].value.split(/\r?\n|\r/).length
+        //     }
+        //     if(box2.checked){
+        //         p.innerHTML = txt[1].value.split(/\r?\n|\r/).length
+        //     }
+        // })
+        btnlist[7].addEventListener("click", function () {
+            if (box1.checked) {
+                p.innerHTML = txt[0].value.substr(num_a.value, num_b.value)
+            }
+            if (box2.checked) {
+                p.innerHTML = txt[1].value.substr(num_a.value, num_b.value)
+            }
+        })
+        btnlist[8].addEventListener("click", function () {
+            if (box1.checked) {
+                p.innerHTML = txt[0].value.toLocaleUpperCase();
+            }
+            if (box2.checked) {
+                p.innerHTML = txt[1].value.toLocaleUpperCase();
+            }
+        })
+        btnlist[9].addEventListener("click", function () {
+            if (box1.checked) {
+                p.innerHTML = txt[0].value.toLocaleLowerCase();
+            }
+            if (box2.checked) {
+                p.innerHTML = txt[1].value.toLocaleLowerCase();
+            }
+        })
+        // 去半角空格
+        // btnlist[10].addEventListener("click",function(){
+
+        // })
+        btnlist[11].addEventListener("click", function () {
+            if (box1.checked) {
+                txt[0].value = txt[0].value.replace(txt[0].value, txt[1].value)
+            }
+            if (box2.checked) {
+                txt[1].value = txt[1].value.replace(txt[1].value, txt[0].value)
             }
         })
     </script>
