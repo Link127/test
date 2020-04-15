@@ -29,9 +29,9 @@
             txt.innerHTML = "队列内容："+queue.join("->")
         })
         btnlist[2].addEventListener("click",function(){
-            queue.reverse();
-            window.alert(queue[0])
-            queue.reverse();
+            
+            window.alert(queue[queue.length-1])
+    
         })
         btnlist[3].addEventListener("click",function(){
             if(queue.length === 0){
