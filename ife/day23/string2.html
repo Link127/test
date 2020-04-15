@@ -11,9 +11,7 @@
     <script>
         function diyTrim(str) {
             var result = "";
-
             result = str.replace(/(^\s*)|(\s*$)/g, "");
-
             return result
         }
 
@@ -41,10 +39,8 @@
             } else {
                 result = "";
             }
-
             return result;
         }
-
         // 测试用例
         console.log(removeRepetition("aaa")); // ->a
         console.log(removeRepetition("abbba")); // ->aba
