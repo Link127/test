@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+        // console.log(arr.sort())
+
+        // var arr = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+        // console.log(arr.sort())
+
+        // var arr = [
+        //     [10, 14],
+        //     [16, 60],
+        //     [7, 44],
+        //     [26, 35],
+        //     [22, 63]
+        // ];
+        // var soa = arr.sort((a, b) => b[1] - a[1])
+        // console.log(soa)
+        // 其实是数组依次将数组元素复制给x,y，比如首先将arr[0]赋给x，arr[1]赋给y，然后用x[0] – y[0]，根据返回的值，
+        // 如果返回的是大于0的数，那么就把数组中x放到y的后面，
+        // 如果返回的是0则不变，
+        // 如果小于0则将x放到y的前面，
+        // 然后第一个排序好之后在进行下面两个的排序，直到整个数组排序完成。
+        // 这是默认升序的比较函数，如果要降序排列则只需修改比较方式，改为 return y[0] – x[0] 即可，
+
+        var arr = [{
+            id: 1,
+            name: 'candy',
+            value: 40
+        }, {
+            id: 2,
+            name: 'Simon',
+            value: 50
+        }, {
+            id: 3,
+            name: 'Tony',
+            value: 45
+        }, {
+            id: 4,
+            name: 'Annie',
+            value: 60
+        }];
+        var soa = arr.sort((a,b)=>a.value - b.value)
+        console.log(soa)
+    </script>
+</body>
+
+</html>
