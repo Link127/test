@@ -79,14 +79,14 @@
             }
         })
         // 获取当前行数
-        // btnlist[6].addEventListener("click",function(){
-        //     if (box1.checked) {
-        //         p.innerHTML = txt[0].value.split(/\r?\n|\r/).length
-        //     }
-        //     if(box2.checked){
-        //         p.innerHTML = txt[1].value.split(/\r?\n|\r/).length
-        //     }
-        // })
+        btnlist[6].addEventListener("click",function(){
+            if (box1.checked) {
+                p.innerHTML = txt[0].value.split(/\r?\n|\r/).length
+            }
+            if(box2.checked){
+                p.innerHTML = txt[1].value.split(/\r?\n|\r/).length
+            }
+        })
         btnlist[7].addEventListener("click", function () {
             if (box1.checked) {
                 p.innerHTML = txt[0].value.substr(num_a.value, num_b.value)
@@ -112,9 +112,14 @@
             }
         })
         // 去半角空格
-        // btnlist[10].addEventListener("click",function(){
-
-        // })
+        btnlist[10].addEventListener("click",function(){
+            if (box1.checked) {
+                p.innerHTML = txt[0].value.replace(/\s+/g,"")
+            }
+            if (box2.checked) {
+                p.innerHTML = txt[1].value.replace(/\s+/g,"")
+            }
+        })
         btnlist[11].addEventListener("click", function () {
             if (box1.checked) {
                 txt[0].value = txt[0].value.replace(txt[0].value, txt[1].value)
