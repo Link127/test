@@ -28,11 +28,7 @@ ol, ul, li{
   list-style: none;
 }
 
-li{
-    float: left;
-    font-weight: bold;
-    margin-right: 10px;
-}
+
 .nav{
     width: 600px;
     height: 50px;
@@ -49,6 +45,11 @@ li{
     width: auto;
     height: 85px;
     border-bottom: 1px solid rgb(134, 129, 129);
+}
+li{
+  float: left;
+  font-weight: bold;
+  margin-right: 10px;
 }
 h2{
     float: left;
