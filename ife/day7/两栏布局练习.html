@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            width: 80%;
+            height: 400px;
+            border: 1px dashed #ff6c60;
+        }   
+        .float{
+            float: left;
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            border: 1px dashed darkorchid;
+           
+        }
+        .right{
+            width: calc(100% - 300px);
+            height: 300px;
+            border: 1px dashed darkgoldenrod;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="left float"></div>
+        <div class="right "></div>
+    </div>
+</body>
+</html>
