@@ -20,49 +20,27 @@
         var minus = document.getElementById("minus-btn");
         var times = document.getElementById("times-btn");
         var divide = document.getElementById("divide-btn");
+        var result = document.getElementById("result");
         add.addEventListener("click", function () {
-            var a = parseInt(document.getElementById("first-number").value)
-            var b = parseInt(document.getElementById("second-number").value)
-            var res = document.getElementById("result");
-            if(!isNaN(a+b)){
-                res.innerHTML="运算结果 :"+ (a+b)
-                }
-            else{
-                alert("输入不规范，请重新输入")
-            }
+            var first =parseInt( document.getElementById("first-number").value);
+            var second = parseInt( document.getElementById("second-number").value);
+            result.innerHTML = "运算结果:  " + (first + second);
+
         })
-        minus.addEventListener("click", function () {
-            var a = parseInt(document.getElementById("first-number").value)
-            var b = parseInt(document.getElementById("second-number").value)
-            var res = document.getElementById("result");
-            if(!isNaN(a-b)){
-                res.innerHTML="运算结果 :"+ (a-b)
-                }
-            else{
-                alert("输入不规范，请重新输入")
-            }
+        minus.addEventListener("click",function(){
+            var first =document.getElementById("first-number").value;
+            var second = document.getElementById("second-number").value;
+            result.innerHTML = "运算结果:  " + (first - second);
         })
-        times.addEventListener("click", function () {
-            var a = parseInt(document.getElementById("first-number").value)
-            var b = parseInt(document.getElementById("second-number").value)
-            var res = document.getElementById("result");
-            if(!isNaN(a*b)){
-                res.innerHTML="运算结果 :"+ (a*b)
-                }
-            else{
-                alert("输入不规范，请重新输入")
-            }
+        times.addEventListener("click",function(){
+            var first =document.getElementById("first-number").value;
+            var second = document.getElementById("second-number").value;
+            result.innerHTML = "运算结果:  " + (first * second);
         })
-        divide.addEventListener("click", function () {
-            var a = parseInt(document.getElementById("first-number").value)
-            var b = parseInt(document.getElementById("second-number").value)
-            var res = document.getElementById("result");
-            if(!isNaN(a/b)&&b!=0){
-                res.innerHTML="运算结果 :"+ (a/b)
-                }
-            else{
-                alert("输入不规范，请重新输入")
-            }
+        divide.addEventListener("click",function(){
+            var first =document.getElementById("first-number").value;
+            var second = document.getElementById("second-number").value;
+            result.innerHTML = "运算结果:  " + (first / second);
         })
     </script>
 </body>
