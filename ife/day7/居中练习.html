@@ -7,80 +7,51 @@
 </head>
 <style>
     /* 行盒居中利用 text-align: center;和line-height*/
-    .line{
-        background-color: aquamarine;
-        width: 200px;
-        height: 300px;
-        line-height: 300px;
-        text-align: center;
-        margin: 0 auto;
-    }
+    
     /*当父子都有宽高时 计算margin值 */
     .block{
         width: 300px;
         height: 300px;
         background:#2ff3ff;
         border: 1px solid white;
+        position: relative;
     }
     .block>div{
         width: 100px;
         height: 100px;
         background-color: blue;
-        margin: 100px 100px;
-    }
-    /* 利用定位 四个方向都设置0，再margin： auto*/
-    .block2{
-        position: relative;
-        width: 300px;
-        height: 300px;
-        background:#2ff3ff;
-        margin-bottom: 20px;
-    }
-    .block2>div{
-        width: 100px;
-        height: 100px;
-        background: #fff;
+        border-radius: 50%;
         position: absolute;
-        /* left: 0;
+        /* 方法1 */
+        /* top: 0;
+        left: 0;
         right: 0;
         bottom: 0;
-        top: 0;
         margin: auto; */
-        left: 50%;
+
+        /* 方法2 */
+        /* left: 50%;
         top: 50%;
         margin-top: -50px;
-        margin-left: -50px;
-       
-    }
-    /* 利用定位，上左设置50%，再用  transform: translate(-50%,-50%);*/
-    .block3{
-        width: 300px;
-        height: 300px;
-        background:#2ff3ff;
-        position: relative;
-    }
-    .block3>div{
-        /* width: 200px;
-        height: 100px; */
-        background-color: yellow;
-        position: absolute;
-        left: 50%;
+        margin-left: -50px; */
+
+        /* 方法3 */
+        /* left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%); */
+
+        /* 方法4 计算margin值*/
+        margin-left: 100px;
+        margin-top: 100px;
     }
+    
+    
 </style>
 <body style="min-width: 1200px;">
-    <div class="line">
-        <span>行盒水平垂直居中</span>
-    </div>
+   
     <div class="block">
-        <div>块盒水平垂直居中</div>
+        <div></div>
     </div>
-    <div class="block2">
-        <div>块盒水平垂直居中</div>
-    </div>
-    <div class="block3">
-        <div>块盒水平垂直居中</div>
-    </div>
+   
 </body>
 </html>
