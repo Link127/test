@@ -57,3 +57,5 @@ function addLoadEvent(func) {
 }
 
 addLoadEvent(prepareGallery);
+
+// 先写下换图片功能函数，再用预备函数绑定事件给每个a标签，最后写事件加载，加载准备函数即可
