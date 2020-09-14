@@ -20,7 +20,7 @@ function showpic(whichpic) {
       description.firstChild.nodeValue = text;
     }
   }
-  return true;
+  return false;
 }
 
 function prepareGallery() {
@@ -37,10 +37,10 @@ function prepareGallery() {
   var links = gallery.getElementsByTagName("a");
   for (var i = 0; i < links.length; i++) {
     links[i].onclick = function () {
-      return showpic(this) ? false : true;
+      return showpic(this) ;
 
     };
-   
+    links[i].onkeypress = links[i].onclick;
   }
 }
 
@@ -56,6 +56,36 @@ function addLoadEvent(func) {
   }
 }
 
+function insertAfter(ele,target){
+  var parent = target.parentNode;
+  if(parent.lastChild == target){
+    parent.appendChild(ele);
+  }
+  else{
+    parent.insertBefore(ele,target.nextSibling);
+  }
+};
+
+function preparePlaceHlder(){
+  var placeHolder = document.createElement("img");
+  placeHolder.setAttribute("id","placeHolder");
+  placeHolder.setAttribute("src","image/5b7382f25878f.jpg");
+  placeHolder.setAttribute("alt","my image gallery");
+  var description = document.createElement("p");
+  description.setAttribute("id","description");
+  var desctext = document.createTextNode("选择一个图片");
+  description.appendChild(desctext);
+  var gallery = document.getElementById("imagegallery");
+  insertAfter(placeHolder,gallery);
+  insertAfter(description,placeHolder);
+
+}
+
+addLoadEvent(preparePlaceHlder);
+
 addLoadEvent(prepareGallery);
 
+
 // 先写下换图片功能函数，再用预备函数绑定事件给每个a标签，最后写事件加载，加载准备函数即可
+
+
