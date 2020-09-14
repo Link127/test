@@ -41,3 +41,7 @@ img {
 #imagegallery li{
     display: inline;
 }
+#placeHolder{
+    width: 600px;
+    height: 400px;
+}
