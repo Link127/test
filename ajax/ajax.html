@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajax</title>
+    <title>Ajax展示歌单</title>
 </head>
 
 <body>
     <div id="new">
         <button id="btn" onclick="loadXMLDoc()">点我</button>
     </div>
+    <ul id="list">
+        展示列表
+    </ul>
 
     <script>
         function loadXMLDoc() {
@@ -22,11 +25,24 @@
             }
             xmlhttp.onreadystatechange = function () {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("new").innerHTML = xmlhttp.responseText;
+                    var catalog = JSON.parse(xmlhttp.responseText);
+                    var classification = catalog.tags;
+                    console.log(classification)
+                    Lists(classification);
                 }
             }
             xmlhttp.open("GET", "http://47.106.165.163:3000/playlist/hot", true);
             xmlhttp.send();
+        }
+
+        function Lists(array) {
+            var list = document.getElementById("list");
+            for (var i = 0; i < array.length; i++) {
+                var li = document.createElement("li");
+                var txt = document.createTextNode(array[i].name)
+                li.appendChild(txt);
+                list.appendChild(li);
+            }
         }
     </script>
 </body>
