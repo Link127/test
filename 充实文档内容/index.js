@@ -18,7 +18,7 @@ function displayAbbreviation() {
     if(current.childNodes.length<1){
         continue;
     }
-    var key = current.lastChild.nodeValue;
+    var key = current.innerText;
     var definition = current.getAttribute("title");
     defs[key] = definition;
   }
@@ -26,12 +26,16 @@ function displayAbbreviation() {
   var dlist = document.createElement("dl");
   for (key in defs) {
     var dtitle = document.createElement("dt");
-    var ddes_text = document.createTextNode(key);
-    dtitle.appendChild(ddes_text);
+       // var ddes_text = document.createTextNode(key);
+    // dtitle.appendChild(ddes_text);
+    dtitle.innerText=key;
+
+    
     var ddesc = document.createElement("dd");
-    var definition = defs[key];
-    var ddesc_text = document.createTextNode(definition);
-    ddesc.appendChild(ddesc_text);
+    // var definition = defs[key];
+    // var ddesc_text = document.createTextNode(definition);
+    // ddesc.appendChild(ddesc_text)
+    ddesc.innerText=defs[key];
     dlist.appendChild(dtitle);
     dlist.appendChild(ddesc);
   }
@@ -39,8 +43,9 @@ function displayAbbreviation() {
       return false;
   }
   var header = document.createElement("h2");
-  var header_text = document.createTextNode("Abbreviation");
-  header.appendChild(header_text);
+//   var header_text = document.createTextNode("Abbreviation");
+//   header.appendChild(header_text);
+  header.innerText = "Abbreviation";
   document.body.appendChild(header);
   document.body.appendChild(dlist);
 }
