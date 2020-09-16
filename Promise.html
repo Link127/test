@@ -10,8 +10,21 @@
 <body>
     <script>
         var p1 = new Promise(function (resolve, reject) {
-            reject("2");
+            var ajax = new XMLHttpRequest();
+            if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+                ajax = new XMLHttpRequest();
+            } else { // code for IE6, IE5
+                ajax = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4 && ajax.status == 200) {
+                    resolve (ajax.responseText)
+                }
+            }
+            ajax.open("GET","http://47.106.165.163:3000/playlist/name/update",true)
+            ajax.send();
         });
+        console.log("aaa")
         p1.then(console.log);
     </script>
 </body>
