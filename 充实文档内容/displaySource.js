@@ -9,8 +9,9 @@ function displaySource(){
         if(quoteElement.length<1)continue;
         var elem = quoteElement[quoteElement.length-1];
         var link = document.createElement("a");
-        var txt = document.createTextNode("source");
-        link.appendChild(txt);
+        // var txt = document.createTextNode("source");
+        // link.appendChild(txt);
+        link.innerText="source"
         link.setAttribute("href",url);
         var sup = document.createElement("sup");
         sup.appendChild(link);
