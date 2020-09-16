@@ -22,13 +22,15 @@ function displayAcess() {
     var txt = akeys[key];
     var str = key + ": " + txt;
     var item = document.createElement("li");
-    var text_node = document.createTextNode(str);
-    item.appendChild(text_node);
+    // var text_node = document.createTextNode(str);
+    // item.appendChild(text_node);
+    item.innerText = str;
     list.appendChild(item);
   }
   var h3 = document.createElement("h3");
-  var h3_txt = document.createTextNode("Accesskeys");
-  h3.appendChild(h3_txt)
+//   var h3_txt = document.createTextNode("Accesskeys");
+//   h3.appendChild(h3_txt);
+  h3.innerText="Accesskeys"
   document.body.appendChild(h3);
   document.body.appendChild(list);
 }
